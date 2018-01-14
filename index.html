@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#a8d58e"/>
+    <title>J. Belknap / Front-End Developer</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <a href="index.html"><img width="200px" height="145px" src="assets/images/logo.svg" alt="Website Logo"></a>
+        </div>
+
+        <nav>
+            <a href=".skills">skills</a>
+            <a href=".projects">projects</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="title">
+            <h2>Front</h2>
+            <span><img height="10px" width="40px" src="assets/images/dash.svg" alt="Green Dash"></span>
+            <h2>End</h2>
+            <h2>Developer</h2>
+        </div>
+
+        <div class="desc">
+
+            <img src="assets/images/joshyb.png" alt="Developer's Portrait">
+
+            <article class="wrapper">
+                <h2>Hi, my name is Joshua Belknap</h2>
+                <p>I am a front-end developer in Columbus, Ohio. I enjoy learning about various web technologies and building
+                    websites.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="skills">
+
+        <article class="skills-wrap">
+
+            <h2>> skills</h2>
+            <p>HTML, CSS, Javascript, JQuery, PHP</p>
+
+            <h2>> software</h2>
+            <p>VSCode, Sketch, Adobe Experience Design(XD)</p>
+
+            <h2>> tools</h2>
+            <p>Jekyll, Bulma, SCSS/SASS, Gulp</p>
+
+        </article>
+
+    </section>
+
+    <section class="projects">
+
+        <div class="projects-title">
+            <h2>> projects</h2>
+        </div>
+
+        <div class="project-wrap">
+
+            <div class="project-card">
+                <a href="projects/karma-news.html">
+                <img src="assets/images/karmanews-capture.png" alt="screenshot of karma news project">
+                </a>
+            </div>
+
+            <div class="project-card">
+                <a href="hold-steady">
+                    <img src="assets/images/coming-soon.png" alt="screenshot of coming soon placeholder">
+                    </a>
+            </div>
+
+            <div class="project-card">
+                <a href="hold-steady">
+                    <img src="assets/images/coming-soon.png" alt="screenshot of coming soon placeholder">
+                    </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="contact-title">
+        <h2>> contact</h2>
+    </div>
+
+    <section class="contact-footer">
+
+        <div class="social">
+            <ul>
+                <li><a href="https://codepen.io/JoshyB/"><img height="100" width="100" src="assets/images/codepen-icon.svg" alt="codepen logo icon"></a></li>
+                <li><a href="https://github.com/JoshyB"><img height="100" width="100" src="assets/images/git-icon.svg" alt="github logo icon"></a></li>
+            </ul>
+        </div>
+
+        <div id="form-message"></div>
+
+        <form method="POST" id="contact">
+            <div id="feedback"></div>
+            <input type="text" name="name" placeholder="Name" id="name" required>
+            <input type="email" name="email" placeholder="Email" id="email" required>
+            <input type="text" name="ruse" placeholder="If you're human, leave this blank" id="ruse">
+            <textarea type="text" name="message" placeholder="Message" id="message" required></textarea>
+            <label>
+                <input id="submitBtn" type="submit" name="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="193 131 100 100"><defs><style>.a{fill:#fff;}.b{fill:none;}</style></defs><circle cx="50" cy="50" r="50" transform="translate(193 131)"/><g transform="translate(213 151)"><path class="a" d="M2.025,48,54.5,25.5,2.025,3,2,20.5l37.5,5L2,30.5Z" transform="translate(3 4.5)"/><path class="b" d="M0,0H60V60H0Z"/></g></svg>
+            </label>
+        </form>
+
+    </section>
+
+    <script src="js/functions.js"></script>
+
+</body>
+
+</html>
