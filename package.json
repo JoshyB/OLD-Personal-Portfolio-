@@ -1,0 +1,24 @@
+{
+  "name": "jbelknap.me",
+  "version": "1.0.0",
+  "description": "Portfolio Site",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.23.5",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "gulp": "gulp default"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshyB/Personal-Portfolio.git"
+  },
+  "author": "JoshyB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshyB/Personal-Portfolio/issues"
+  },
+  "homepage": "https://github.com/JoshyB/Personal-Portfolio#readme"
+}
