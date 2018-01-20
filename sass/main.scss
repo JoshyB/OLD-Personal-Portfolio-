@@ -600,6 +600,7 @@ label svg:hover {
     display: flex;
     align-items: center;
     text-decoration: none;
+    color: #333;
 
     &:hover {
       transition: all 0.3s ease-in-out;
@@ -608,6 +609,7 @@ label svg:hover {
 
      .fa-github-alt {
        margin: 15px;
+       color: #333;
      }
   }
   
