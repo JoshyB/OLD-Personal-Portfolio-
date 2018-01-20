@@ -363,18 +363,37 @@ header nav a {
   -ms-flex-align: center;
   align-items: center;
 }
-.contact-footer .social ul li {
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-  list-style-type: none;
-}
-.contact-footer .social ul li a img {
-  border: 1px solid #b0b0b0;
-  border-radius: 50%;
-}
-.contact-footer .social ul li a img:hover {
-  -webkit-box-shadow: 0 0 10px #d5d5d5;
-  box-shadow: 0 0 10px #d5d5d5;
+
+.contact-footer {
+
+  .social {
+    ul {
+      list-style: none;
+      li {
+
+        margin: 25px;
+        a {
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          color: #333;
+
+          &:hover {
+            transform: scale(1.2);
+            transition: all .3s ease-in-out;
+          }
+
+          .fa-codepen {
+            margin: 10px;
+          }
+
+          .fa-github-alt {
+            margin: 10px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 1024px) {
@@ -413,7 +432,7 @@ header nav a {
   border: 2px solid #d5d5d5;
   display: block;
   margin: auto;
-  font-size: 1.625rem;
+  font-size: 1.325rem;
   padding: 5px;
   border-radius: 0.2rem;
 }
@@ -462,7 +481,7 @@ textarea {
   display: block;
   padding: 5px;
   height: 50%;
-  font-size: 1.625rem;
+  font-size: 1.325rem;
   margin: 0 auto 20px auto;
   border-radius: 0.2rem;
 }
@@ -508,4 +527,88 @@ label svg:hover {
 
 ::placeholder {
   color: #d5d5d5;
+}
+
+// ---------project page styling--------------
+
+.project-page-wrapper {
+  position: relative;
+  height: auto;
+  padding: 50px 0;
+  margin: 100px auto 100px auto;
+  box-sizing: border-box;
+  clear: both;
+
+  &:after,
+  &:before {
+    background: #a8d58e;
+    display: block;
+    content: "";
+    position: absolute;
+    height: 70%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+  &:before {
+    top: 0;
+    -webkit-transform: skewY(-6deg);
+    transform: skewY(-6deg);
+  }
+  &:after {
+    bottom: 0;
+    -webkit-transform: skewY(-6deg);
+    transform: skewY(-6deg);
+  }
+}
+
+.project-title {
+  text-align: center;
+}
+
+.project-thumbnail {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1024px;
+  margin-top: 50px;
+
+  img {
+    width: 100%;
+    border: 3px #eee solid;
+
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      transform: scale(1.050);
+    }
+  }
+}
+
+.project-description {
+  width: 80%;
+  height: auto;
+  max-width: 1024px;
+  margin: 30px auto 30px auto;
+}
+
+.project-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      transform: scale(1.1)
+    }
+
+     .fa-github-alt {
+       margin: 15px;
+     }
+  }
+  
 }
