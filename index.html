@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#a8d58e"/>
-    <link rel="icon" href="./assets/images/logo-icon.svg">
-    <title>J. Belknap / Front-End Developer</title>
+    <meta name="theme-color" content="#a8d58e" />
+    <link rel="icon" href="./assets/images/jb_logo.svg">
+    <title>J. Belknap / Web Developer</title>
 
     <link rel="stylesheet" href="./css/main.css">
 
@@ -19,7 +19,9 @@
     <header>
 
         <div class="logo">
-            <a href="index.html"><img width="200px" height="145px" src="assets/images/logo.svg" alt="Website Logo"></a>
+            <a href="index.html">
+                <img width="200px" height="145px" src="assets/images/logo.svg" alt="Logo that is an abstract 'J', and 'B' that is merged together">
+            </a>
         </div>
 
         <nav>
@@ -32,21 +34,14 @@
 
     <section class="hero">
 
-        <div class="title">
-            <h2>Front</h2>
-            <span><img height="10px" width="40px" src="assets/images/dash.svg" alt="Green Dash"></span>
-            <h2>End</h2>
-            <h2>Developer</h2>
-        </div>
-
         <div class="desc">
 
-            <img src="assets/images/joshyb.png" alt="Developer's Portrait">
+            <img src="assets/images/Joshua.JPG" alt="A photo portrait of the developer">
 
             <article class="wrapper">
                 <h2>Hi, my name is Joshua Belknap</h2>
-                <p>I am a front-end developer in Columbus, Ohio. I enjoy learning about various web technologies and building
-                    websites.</p>
+                <p>I am a Web developer in Columbus, Ohio. I enjoy learning about various web technologies and building websites.
+                </p>
             </article>
 
         </div>
@@ -58,13 +53,13 @@
         <article class="skills-wrap">
 
             <h2>> skills</h2>
-            <p>HTML, CSS, Javascript, JQuery, PHP</p>
+            <p>HTML, CSS, Javascript, JQuery, Node.js, Express.js</p>
 
             <h2>> software</h2>
             <p>VSCode, Sketch, Adobe Experience Design(XD)</p>
 
             <h2>> tools</h2>
-            <p>Jekyll, Bulma, SCSS/SASS, Gulp</p>
+            <p>Jekyll, Bulma, SCSS/SASS, Gulp, Webpack</p>
 
         </article>
 
@@ -78,22 +73,34 @@
 
         <div class="project-wrap">
 
-            <div class="project-card">
-                <a href="projects/karma-news.html">
-                <img src="assets/images/karmanews-capture.png" alt="screenshot of karma news project">
+            <div class="project">
+                <a href="#">
+                    <img src="./assets/images/cbusparks.png" alt="Cbusparks Logo">
                 </a>
+                <div class="site__link">
+                    <a href="http://www.cbusparks.fun">cbusparks.fun</a>
+                </div>
+                <div class="project__description">
+                    <p>Cbusparks is one of the projects I'm most proud of. It's a fullstack application that allows people to
+                        view, add, and review parks and playgrounds in the Columbus, Ohio area. It's built with node.js,
+                        express.js, and uses MongoDB for its database.
+                    </p>
+                </div>
             </div>
 
-            <div class="project-card">
-                <a href="projects/homeglowimaging.html">
-                    <img src="assets/images/homeglow.png" alt="screenshot of coming soon placeholder">
-                    </a>
-            </div>
-
-            <div class="project-card">
-                <a href="hold-steady">
-                    <img src="assets/images/coming-soon.png" alt="screenshot of coming soon placeholder">
-                    </a>
+            <div class="project">
+                <a href="https://www.homeglowimaging.com">
+                    <img src="./assets/images/homeglow.png" alt="Homeglow Imaging Logo">
+                </a>
+                <div class="site__link">
+                    <a href="http://www.homeglowimaging.com">homeglowimaging.com</a>
+                </div>
+                <div class="project__description">
+                    <p>This website was done for a Real Estate photography company operating in and around Columbus, Ohio. The
+                        site was built with
+                        <a href="https://bulma.io/">Bulma</a>, Javascript, and HTML, as well as some PHP for handling the contact forms.</p>
+                    </p>
+                </div>
             </div>
 
         </div>
@@ -108,8 +115,18 @@
 
         <div class="social">
             <ul>
-                <li><a href="https://www.github.com/JoshyB"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i><p>Github</p></a></li>
-                <li><a href="https://www.codepen.io/joshyb"><i class="fa fa-codepen fa-2x" aria-hidden="true"></i><p>Codepen</p></a></li>
+                <li>
+                    <a href="https://www.github.com/JoshyB">
+                        <i class="fa fa-github-alt fa-2x" aria-hidden="true"></i>
+                        <p>Github</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.codepen.io/joshyb">
+                        <i class="fa fa-codepen fa-2x" aria-hidden="true"></i>
+                        <p>Codepen</p>
+                    </a>
+                </li>
             </ul>
         </div>
 
@@ -123,7 +140,24 @@
             <textarea type="text" name="message" placeholder="Your message" id="message" required></textarea>
             <label>
                 <input id="submitBtn" type="submit" name="submit">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="193 131 100 100"><defs><style>.a{fill:#fff;}.b{fill:none;}</style></defs><circle cx="50" cy="50" r="50" transform="translate(193 131)"/><g transform="translate(213 151)"><path class="a" d="M2.025,48,54.5,25.5,2.025,3,2,20.5l37.5,5L2,30.5Z" transform="translate(3 4.5)"/><path class="b" d="M0,0H60V60H0Z"/></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="193 131 100 100">
+                    <defs>
+                        <style>
+                            .a {
+                                fill: #fff;
+                            }
+
+                            .b {
+                                fill: none;
+                            }
+                        </style>
+                    </defs>
+                    <circle cx="50" cy="50" r="50" transform="translate(193 131)" />
+                    <g transform="translate(213 151)">
+                        <path class="a" d="M2.025,48,54.5,25.5,2.025,3,2,20.5l37.5,5L2,30.5Z" transform="translate(3 4.5)" />
+                        <path class="b" d="M0,0H60V60H0Z" />
+                    </g>
+                </svg>
             </label>
         </form>
 

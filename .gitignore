@@ -1,5 +1,4 @@
 .DS_Store
-/php
 /config
 /node_modules
-package-lock.json
+/projects
