@@ -173,7 +173,7 @@ header nav a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 100px auto 0; }
+  margin: 50px auto 0; }
 
 .hero .desc img {
   height: 250px;
@@ -252,6 +252,7 @@ header nav a {
   height: auto;
   padding: 100px 0;
   margin: 100px auto 100px auto;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   clear: both; }
 
@@ -282,29 +283,40 @@ header nav a {
 .projects .project-wrap {
   max-width: 1024px;
   margin: 100px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
 .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border-bottom: 1px solid grey;
   margin-top: 20px; }
 
 .project a {
   width: 50%;
+  -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out; }
 
 .site__link {
   text-align: center;
   font-size: 1.2rem;
   margin-top: 20px; }
-
-.project a:hover {
-  transform: scale(1.1); }
 
 .project img {
   margin: 0 auto;
@@ -347,11 +359,17 @@ header nav a {
     margin: 25px; }
     .contact-footer .social ul li a {
       text-decoration: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       color: #333; }
       .contact-footer .social ul li a:hover {
+        -webkit-transform: scale(1.2);
         transform: scale(1.2);
+        -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out; }
       .contact-footer .social ul li a .fa-codepen {
         margin: 10px; }

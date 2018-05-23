@@ -28,7 +28,8 @@ window.onload = function() {
   for (let i = 0; i < nav.length; i++) {
     nav[i].addEventListener("click", function(event) {
       event.preventDefault();
-      let target = document.querySelector(nav[i].getAttribute("href")).offsetTop;
+      let target = document.querySelector(nav[i].getAttribute("href"))
+        .offsetTop;
       autoScroll(document.body, target, 600);
     });
   }
@@ -55,9 +56,7 @@ window.onload = function() {
 
     http.onload = function() {
       if (this.responseText == 42) {
-        name.value = "";
-        email.value = "";
-        msg.value = "";
+        form.reset();
         feedback.setAttribute(
           "style",
           "background-color: #A8D58E; padding: 5px; border-radius: 5px;"
@@ -75,15 +74,4 @@ window.onload = function() {
     http.open("POST", "php/mailer.php", true);
     http.send(data);
   });
-
-  //stopping the browser from reloading when a "coming soon" project image is clicked
-  const comingSoonProject = document.querySelectorAll(".project-card a");
-
-  for (let i = 0; i < comingSoonProject.length; i++) {
-    comingSoonProject[i].addEventListener("click", function(event) {
-      if (comingSoonProject[i].getAttribute("href") == "hold-steady") {
-        event.preventDefault();
-      }
-    });
-  }
 };

@@ -1,6 +1,6 @@
 <?php
 require 'PHPMailerAutoload.php';
-require '../../phpconfig/config.php'
+require '../../phpconfig/config.php';
 
 $trap = $_POST['ruse'];
 

@@ -196,7 +196,7 @@ header nav a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 100px auto 0;
+  margin: 50px auto 0;
 }
 .hero .desc img {
   height: 250px;
@@ -283,7 +283,8 @@ header nav a {
   height: auto;
   padding: 100px 0;
   margin: 100px auto 100px auto;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   clear: both;
 }
 .projects:after,
@@ -313,23 +314,35 @@ header nav a {
 .projects .project-wrap {
   max-width: 1024px;
   margin: 100px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  box-sizing: inherit;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 1px solid grey;
   margin-top: 20px;
 }
 
 .project a {
-  // display: flex;
-  // align-items: center;
   width: 50%;
+  -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
 
@@ -339,9 +352,6 @@ header nav a {
   margin-top: 20px;
 }
 
-.project a:hover {
-  transform: scale(1.1);
-}
 
 .project img {
   margin: 0 auto;
@@ -392,12 +402,18 @@ header nav a {
         margin: 25px;
         a {
           text-decoration: none;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          align-items: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
           color: #333;
 
           &:hover {
-            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+                    transform: scale(1.2);
+            -webkit-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
           }
 
@@ -547,88 +563,3 @@ label svg:hover {
   color: #d5d5d5;
 }
 
-// ---------project page styling--------------
-
-// .project-page-wrapper {
-//   position: relative;
-//   height: auto;
-//   padding: 50px 0;
-//   margin: 100px auto 100px auto;
-//   box-sizing: border-box;
-//   clear: both;
-
-//   &:after,
-//   &:before {
-//     background: #a8d58e;
-//     display: block;
-//     content: "";
-//     position: absolute;
-//     height: 70%;
-//     left: 0;
-//     right: 0;
-//     z-index: -1;
-//   }
-//   &:before {
-//     top: 0;
-//     -webkit-transform: skewY(-6deg);
-//     transform: skewY(-6deg);
-//   }
-//   &:after {
-//     bottom: 0;
-//     -webkit-transform: skewY(-6deg);
-//     transform: skewY(-6deg);
-//   }
-// }
-
-// .project-title {
-//   text-align: center;
-// }
-
-// .project-thumbnail {
-//   margin: 0 auto;
-//   width: 80%;
-//   max-width: 1024px;
-//   margin-top: 50px;
-
-//   img {
-//     width: 100%;
-//     border: 3px #eee solid;
-
-//     &:hover {
-//       transition: all 0.3s ease-in-out;
-//       transform: scale(1.050);
-//     }
-//   }
-// }
-
-// .project-description {
-//   width: 80%;
-//   height: auto;
-//   max-width: 1024px;
-//   margin: 30px auto 30px auto;
-// }
-
-// .project-social {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin-bottom: 100px;
-
-//   a {
-//     display: flex;
-//     align-items: center;
-//     text-decoration: none;
-//     color: #333;
-
-//     &:hover {
-//       transition: all 0.3s ease-in-out;
-//       transform: scale(1.1)
-//     }
-
-//      .fa-github-alt {
-//        margin: 15px;
-//        color: #333;
-//      }
-//   }
-
-// }
