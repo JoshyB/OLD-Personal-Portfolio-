@@ -23,7 +23,7 @@ function autoScroll(element, to, duration) {
 
 window.onload = function() {
   //auto scroll handling
-  let nav = document.querySelectorAll("nav a");
+  const nav = document.querySelectorAll("nav a");
 
   for (let i = 0; i < nav.length; i++) {
     nav[i].addEventListener("click", function(event) {
@@ -35,8 +35,7 @@ window.onload = function() {
   }
 
   //contact form handling
-  let form = document.getElementById("contact"),
-    trap = document.getElementById("ruse"),
+  const form = document.getElementById("contact"),
     userFeedback = document.getElementById("feedback");
 
   form.addEventListener("submit", function(e) {
@@ -44,8 +43,8 @@ window.onload = function() {
     e.preventDefault();
     
     let http = new XMLHttpRequest();
-    //submit form
-    form.submit();
+    //construct form data
+    const formData = new FormData(form);
     //wait for a response and then provide feed back to the user
     http.onload = function() {
       if (this.responseText == 42) {
@@ -65,5 +64,6 @@ window.onload = function() {
       }
     };
     http.open("POST", "./php/mailer.php", true);
+    http.send(formData);
   });
 };
