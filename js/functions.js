@@ -36,6 +36,7 @@ window.onload = function() {
 
   //contact form handling
   let form = document.getElementById("contact"),
+    trap = document.getElementById("ruse"),
     userFeedback = document.getElementById("feedback");
 
   form.addEventListener("submit", function(e) {
@@ -43,9 +44,9 @@ window.onload = function() {
     e.preventDefault();
 
     let http = new XMLHttpRequest();
-
+    //submit form
     form.submit();
-
+    //wait for a response and then provide feed back to the user
     http.onload = function() {
       if (this.responseText == 42) {
         form.reset();
