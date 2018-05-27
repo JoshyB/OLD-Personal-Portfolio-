@@ -42,10 +42,10 @@ window.onload = function() {
   form.addEventListener("submit", function(e) {
     //stops page from reloading
     e.preventDefault();
-
-    let http = new XMLHttpRequest();
     //submit form
     form.submit();
+
+    let http = new XMLHttpRequest();
     //wait for a response and then provide feed back to the user
     http.onload = function() {
       if (this.responseText == 42) {
@@ -64,6 +64,6 @@ window.onload = function() {
           "An error has occurred. Please try again later";
       }
     };
-    http.open("POST", "php/mailer.php", true);
+    http.open("POST", "./php/mailer.php", true);
   });
 };
