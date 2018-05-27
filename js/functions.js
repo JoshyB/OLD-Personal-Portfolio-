@@ -36,42 +36,33 @@ window.onload = function() {
 
   //contact form handling
   let form = document.getElementById("contact"),
-    name = document.getElementById("name"),
-    email = document.getElementById("email"),
-    trap = document.getElementById("ruse"),
-    msg = document.getElementById("message"),
-    feedback = document.getElementById("feedback");
+    userFeedback = document.getElementById("feedback");
 
   form.addEventListener("submit", function(e) {
     //stops page from reloading
     e.preventDefault();
 
-    let data = new FormData();
-    data.append("name", name.value);
-    data.append("email", email.value);
-    data.append("message", msg.value);
-    data.append("ruse", trap.value);
-
     let http = new XMLHttpRequest();
+
+    form.submit();
 
     http.onload = function() {
       if (this.responseText == 42) {
         form.reset();
-        feedback.setAttribute(
+        userFeedback.setAttribute(
           "style",
           "background-color: #A8D58E; padding: 5px; border-radius: 5px;"
         );
-        feedback.innerHTML = "Thank you! your message has been received";
+        userFeedback.innerHTML = "Thank you! your message has been received";
       } else {
         feedback.setAttribute(
           "style",
           "background-color: #f45942; padding: 5px; border-radius: 5px;"
         );
-        feedback.innerHTML = "An error has occurred. Please try again later";
+        userFeedback.innerHTML =
+          "An error has occurred. Please try again later";
       }
     };
-
     http.open("POST", "php/mailer.php", true);
-    http.send(data);
   });
 };

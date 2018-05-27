@@ -22,7 +22,7 @@ $m->SMTPAuth = true;
 //$m->SMTPDebug = 2;
 
 $m->Host = 'tls://smtp.gmail.com:587';
-$m->Username = $Username;
+$m->Username = $username;
 $m->Password = $password;
 $m->addAddress($address, $username);
 
